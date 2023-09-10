@@ -1,4 +1,4 @@
-PIP3="pip3" 
+PIP3="pip3"
 APT="apt"
 
 function install_rocksdb {
@@ -7,8 +7,8 @@ function install_rocksdb {
 	fi
 	install_rocksdb_dependencies
 	_DIR=$(pwd)
-	
+
 	_info "Installing RocksDB... This will take a while."
 	$APT install librocksdb-dev
-	$PIP3 install python-rocksdb
+	$PIP3 install https://github.com/bensteinberg/python-rocksdb/archive/refs/heads/master.zip
 }
